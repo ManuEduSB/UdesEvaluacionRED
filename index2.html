@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Entegable_1.SitioWEB</title>
+
+	<style type="text/css">
+
+		/* Efecto de animación de texto */
+		@keyframes moverTexto {
+			0% {
+				transform: translateX(100%); /* Empieza fuera de la pantalla a la derecha */
+			}
+			100% {
+				transform: translateX(-100%); /* Termina fuera de la pantalla a la izquierda */
+			}
+		}
+
+		.onebox {
+			width: 1230px;
+			height: 540px;
+			border-style: ;
+			border-radius: 5px;
+			margin: auto;
+			margin-top: 30px;
+			display: grid;
+			grid-template-columns: 200px 1fr;
+			padding: 25px;
+			grid-column-gap: 20px;
+		}
+
+		.menu {
+			border-style: solid;
+			border-radius: 12px;
+			border-width: 3px;
+			width: 170px;
+			height: 257px;
+			grid-column: 1/2;
+			display: grid;
+			grid-template-rows: 50px 50px 50px 50px 50px;
+			grid-row-gap: 5px;
+			padding: 40px 10px 5px 10px;
+			margin: auto;
+		}
+
+		.view {
+			border-style: solid;
+			border-radius: 8px;
+			width: auto;
+			height: auto;
+			grid-column: 2/3;
+			display: grid;
+			grid-auto-rows: 1fr;
+			grid-row-gap: 5px;
+			padding: 10px;
+			grid-row: 1/3;
+		}
+
+		.logo {
+			width: auto;
+			height: auto;
+			border-style: ;
+			background-image: url('images.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 100%;
+		}
+
+
+		.view11 { display:grid; grid-template-rows:426px 1fr; grid-template-columns: 182px 1fr; }
+		.view22 {display: ;}
+
+
+		.view1, .view2, .view3, .view4, .view5 {
+			width: auto;
+			height: 100%;
+			display: none; /* Start with hidden */
+			border-style:;
+			padding: ;
+			border-radius: 12px;
+			background-color: whitesmoke;
+		}
+
+		/* Estilo de los botones */
+		.bt1, .bt2, .bt3, .bt4, .bt5 {
+			width: 173px;
+			height: 48px;
+			border-style: solid;
+			margin-bottom: 2px;
+			cursor: pointer;
+			position: relative;
+			font-size: 16px;
+			font-weight: bold;
+			font-family: arial;
+			background-color: #2a4196;
+			color: white;
+			border-radius: 10px;
+			overflow: hidden; /* Asegura que el texto no se salga del área */
+		}
+
+		/* Animación de texto en los botones con velocidades diferentes */
+		.bt1 .text {
+			display: inline-block;
+			white-space: nowrap;
+			animation: moverTexto 10s linear infinite; /* Velocidad más lenta */
+		}
+
+		.bt2 .text {
+			display: inline-block;
+			white-space: nowrap;
+			animation: moverTexto 7s linear infinite; /* Velocidad media */
+		}
+
+		.bt3 .text {
+			display: inline-block;
+			white-space: nowrap;
+			animation: moverTexto 10s linear infinite; /* Velocidad más rápida */
+		}
+
+		.bt4 .text {
+			display: inline-block;
+			white-space: nowrap;
+			animation: moverTexto 8s linear infinite; /* Velocidad media */
+		}
+
+		.bt5 .text {
+			display: inline-block;
+			white-space: nowrap;
+			animation: moverTexto 12s linear infinite; /* Velocidad más lenta */
+		}
+
+		/* Cambios al pasar el ratón sobre los botones */
+		.bt1:hover, .bt2:hover, .bt3:hover, .bt4:hover, .bt5:hover {
+			background-color:  #ff7043;
+		}
+
+		/* Estilos del botón de cierre (X) */
+		.close {
+			font-size: 20px;
+			background-color:  #c0392b ;
+			border-style: solid;
+			border-radius: 8px;
+			width: 35px;
+			height: 35px;
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: black;
+			font-size: 14px;
+			border-style:solid;
+			border-width:3px;
+			border-color:black;
+			position: absolute;
+			font-family: 'Comic Sans MS';
+			font-weight: 600;
+			top: 70px;
+  			right: 82px;
+		}
+
+		/* Vista de bienvenida */
+		.viewes {
+			text-align: center;
+			font-size: 24px;
+			color: #2a4196;
+			margin-top: 20px;
+		}
+
+		
+		.boxx1 { width:150xp; height:auto; border-style:; grid-column:1/2; grid-row:2/3; text-align: center;}
+		.boxx2 { width:150xp; height:auto; border-style:; grid-column:2/3; grid-row:2/3; text-align: center;}
+
+		.t1 { grid-column:1/3; grid-row:1/2; text-align: center; align-items: center; font-family: arial; font-size: 19px; }
+		.t2 {font-family: arial; font-size: 20px; }
+		.t3 {font-family: arial; font-size: 20px; }
+		.textxx { width: 450px; height: auto; overflow-y:scroll; }
+		.textxx { width: 450px; height: auto; overflow-y:scroll; }
+		.texx { display:grid; grid-template-columns: 200px 200px; grid-template-rows: 200px 200px 200px 200x; grid-row-gap: 10px; grid-column-gap:10px; }
+		.viewtext { grid-row:2/3; }
+
+
+
+		 /* Ocultar los divs por defecto */
+        .boxx1, .boxx2, .boxx3 .boxx4 .boxx5{
+            display: none;
+        }
+
+        /* Estilos de los botones */
+        .bts button {
+            padding: 10px 38px;
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-top: 70px;
+        }
+        .bts { padding-left:12px; }
+        .bt33{width: 160px;}
+
+        .bts button.active {
+            background-color: #2a4196;
+            color: white;
+        }
+
+        .bts button:hover {
+            background-color: #ff7043;
+        }
+
+        /*botones de select red*/
+
+        .bxtxt button {background-color: #2a4196;;  color: white; border: none; border-radius: 5px; cursor: pointer; width: 210px; height:45px; }
+        .bxtxt button .active {background-color: #2a4196; color: white;}
+        .bxtxt button:hover {background-color: #ff7043; }
+
+        .textO {font-weight: 600;}
+        /* Estilos para el contenido */
+        .view22 {
+            margin-top: 10px;
+        }
+
+        .scroll-container {
+            overflow-y: auto;
+            
+            height: 407px;
+			  width: 640px;
+			  margin-left: 81px;
+			  margin-top: 20px;
+        }
+
+        .boxx3 { height: 400px;
+			  width: 760px;
+			  margin-left: 5px;
+			  margin-top: 20px; 
+			  
+			}
+
+
+			.boxx5 {  height: 420px;
+			  width: 760px;
+			  margin-left: 5px;
+			  margin-top: 20px; 
+			  border-style: ;
+			}
+
+		.bxtxt {
+			height: ;
+			  width: 760px;
+			display: grid;
+			  grid-template-columns: 1fr;
+			  grid-auto-rows: 1fr 1fr 300px;
+			  text-align: center;
+			  margin: auto;
+			  margin-top: 5px;
+			  grid-row-gap: 12px;
+
+			}
+
+		.video1 { width: 530px; height: 300px; border-style: solid; border-width: 1px; margin: auto;}
+
+
+
+		.txtSel{ display:grid; grid-template-columns: 170px 1fr;   place-items: center;}
+		
+		.txtInst { border-style:outset; width: 100px; height: 100px; border-radius: 15px; background-color: ;}
+		.txtInst p { font-family:'Comic Sans MS'; text-align:center; word-wrap:break-word; margin: auto;}
+		.txtInst .tx3 { margin-top:25px; }
+
+		.grdInst { display: grid; grid-template-columns: 100px 100px 100px 100px 100px; grid-template-rows: 100px; grid-column-gap:15px; }
+
+		.Inst { font-family: 'Comic Sans MS';  font-weight: 600;}
+
+
+		.dvtxt { text-align:justify; }
+		.dvtxt b { font-size:18px; }
+		.divbt { margin:auto; }
+
+		.btS1 { width: ; height: ; border-radius: ; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .grid-item {
+            background-color: #f1f1f1;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ccc;
+            display: grid;
+            grid-template-rows: 85px 40px;
+        }
+
+        .grid11 {grid-column: 1/4; grid-template-rows: 170px 30px;}
+        .grid12 { grid-template-rows: 110px 24px; }
+        .grid13 { grid-template-rows: 130px 24px; }
+        .grid-item  b { font-size:14px; font-family:aial; }
+        .tex1 {font-size: 13px;  width: 156px;  padding-top: 16px; word-wrap: break-word;}
+
+
+        .icom1 { position: absolute;  right: 83px;  font-size: 47px; overflow: hidden; height: 330px; width:70px;}
+        .icom2 {position: absolute;  overflow: hidden; height: 330px; width:70px; }
+        .c1 { font-size:13px; }
+        .c3 { font-size:14px; font-family:arial; }
+        .c3 b { font-size:12px; }
+
+
+
+			    /* Estilo de los iconos en movimiento */
+			    .ico1 {
+			      display: flex;                    /* Organiza los elementos en fila */
+			      font-size: 50px;                  /* Tamaño de los iconos */
+			      white-space: nowrap;              /* Evita el salto de línea entre los iconos */
+			      animation: moveUp 5s linear infinite; /* La animación de desplazamiento */
+			    }
+
+			    /* Definición de la animación */
+				    @keyframes moveUp {
+				      0% {
+				        transform: translateY(100%);  /* Comienza desde un poco abajo del contenedor */
+				      }
+				      50% {
+				        transform: translateY(0); /* Los iconos se muestran en su posición inicial */
+				      }
+				      100% {
+				        transform: translateY(-100%); /* Los iconos se mueven hacia arriba */
+				      }
+				    }
+
+		.imgcap {background-image: url('Captura.png');}
+		.imgcap2 {background-image: url('Captura2.png');}
+
+		
+		.Onbx { display: grid; grid-template-rows: 190px 190px 190px 190px 190px 190px; grid-template-columns:770px; grid-row-gap: 15px; overflow-y: auto; height: 427px;}
+		
+		.bxn1 { border-style:solid; width:auto; height:189px; border-width:2px; border-radius:12px; }
+		.bxn2 { border-style:solid; width:auto; height:189px; border-width:2px; border-radius:12px; }
+		.bxn3 { border-style:solid; width:auto; height:189px; border-width:2px; border-radius:12px; }
+		.bxn4 { border-style:solid; width:auto; height:189px; border-width:2px; border-radius:12px; }
+		.bxn5 { border-style:solid; width:auto; height:189px; border-width:2px; border-radius:12px; }
+		.bxn6 { border-style:solid; width:auto; height:189px; border-width:2px; border-radius:12px; }
+
+		.bxn1 { display: grid; overflow-y:auto; grid-template-columns: 116px 290px 290px; grid-template-rows: 35px 1fr 1fr 1fr; font-family: arial; grid-column-gap: 15px; grid-row-gap: 15px;}
+		.num11 { grid-column:1/2; grid-row:1/4; position: ;  margin-left: 5px;}
+
+		.gr-1, .tt1, .tt2, .tt3, .tt4, .tt5, .tt6 { grid-column:2/4; grid-row:1/2;  margin: auto;}
+		.gr-2, .texR1, .texCODA1, .texNor1, .texF1 { grid-column:2/3; grid-row:2/3; text-align: justify; font-size:14px;}
+		.y2 { font-size:14px; }
+		.gr-2, .texR1 b {  font-size:16px; }
+		.gr-3, .texR2, .texCODA2, .texNor2, .texF2 { grid-column:3/4; grid-row:2/3; font-size: 14px;}
+		.gr-3, .texR2 ol { text-align:justify; font-size:14px; margin-top: 5px;}
+		.gr-4, .texR3, .texCODA3, .texNor3, .texF3 { grid-column:2/3; grid-row:3/4; font-size: 14px;}
+		.gr-5, .texR4, .texCODA4, .texNor4, .texF4 { grid-column:3/4; grid-row:3/4; font-size: 14px; }
+		.gr-6, .texR5,.texCODA5, .texNor5, .texF5  { grid-column:2/4; grid-row:4/5; font-size: 14px;}
+
+		.num1 {border-style:solid;  border-radius:50%; border-width: 2px; width: 65px;  height: 62px;  display: flex;  justify-content: center;  align-items: center;  font-size: 40px;  font-family: 'Comic Sans MS';  margin:auto;    margin-top: auto;  margin-top: 33px; background-color:; }
+		.texCODA2, .texNor2 ul { margin-top:5px; font-size: 14px;}
+		.texCODA2, .texNor2 b { font-size: 14px;}
+		.texF2 ol { text-align:justify; }
+
+
+.bxn2,  .bxn4, .bxn5 { display: grid; overflow-y:auto; grid-template-columns: 116px 285px 285px; grid-template-rows: 35px 1fr 1fr 1fr; font-family: arial; grid-column-gap: 10px; grid-row-gap: 15px; }
+.nu2, .nu3, .nu4, .nu5, .nu6 { grid-column:1/2; grid-row:1/4; position: ;  margin-left: 5px;}
+
+.nu2, .nu3, .nu4, .nu5, .nu6 {border-style:solid;  border-radius:50%; border-width: 2px; width: 65px;  height: 62px;  display: flex;  justify-content: center;  align-items: center;  font-size: 40px;  font-family: 'Comic Sans MS';  margin:auto;    margin-top: auto;  margin-top: 33px; background-color:; }
+
+.texMc2 { font-size:14px; text-align:justify; }
+
+.bxn3 { display: grid; overflow-y:auto; grid-template-columns: 116px 270px 270px; grid-template-rows: 35px 120px 1fr 1fr 1fr 1fr; font-family: arial; grid-column-gap: 40px; grid-row-gap: 20px; }
+.texCODA1 { grid-column:2/3; grid-row:2/3; text-align: justify; font-size:14px;}
+.texCODA2 { grid-column:3/4; grid-row:2/5; }
+.texCODA3 { grid-column:2/3; grid-row:3/4; font-size: 14px;}
+.texCODA4 { grid-column:2/4; grid-row:5/6; font-size: 14px; margin-top: 27px;}
+.texCODA5 { grid-column:2/4; grid-row:6/7; font-size: 14px;}
+
+.bxn6  { display: grid; overflow-y:auto; grid-template-columns: 114px 280px 280px; grid-template-rows: 35px 110px 1fr 1fr 1fr; font-family: arial; grid-column-gap: 20px; grid-row-gap: 15px; }
+
+.texMc1  { grid-column:2/3; grid-row:2/3; text-align: justify; font-size:14px;}
+.texMc2 { grid-column:3/4; grid-row:2/5; }
+.texMc3{ grid-column:2/3; grid-row:3/4; font-size: 14px;}
+.texMc4 { grid-column:2/3; grid-row:4/5; font-size: 14px;  text-align: justify;}
+.texMc5  { grid-column:2/4; grid-row:5/6; font-size: 14px;}
+.texMc5 ul { text-align:justify; }
+
+
+
+
+
+
+	</style>
+
+</head>
+<body>
+
+<div class="onebox">
+
+	<div class="logo"></div>
+
+	<!-- Menu -->
+	<div class="menu">
+		<button class="bt1" onclick="mostrarVentana(1)"><span class="text">Modelos de Evaluacion y RED</span></button>
+		<button class="bt2" onclick="mostrarVentana(2)"><span class="text">Rediseño</span></button>
+		<button class="bt3" onclick="mostrarVentana(3)"><span class="text">Aplicacion de Modelos de Evaluacion</span></button>
+		<button class="bt4" onclick="mostrarVentana(4)"><span class="text">Referencias</span></button>
+		<!-- <button class="bt5" onclick="mostrarVentana(5)"><span class="text">Botón 5</span></button>-->
+	</div>
+
+	<!-- Vista de contenido -->
+	<div class="view"> 
+		
+		<!-- Mensaje de bienvenida -->
+		<div class="viewes">
+			
+			<br>
+			<br>
+			<br>
+			<br>
+			<span>Bienvenido</span>
+			<br><br>
+
+			<span> Entregable 1. Sitio Web Modelos de Evaluacion de Recursos Educativos Digitales.
+			</span>
+			<br><br>
+			<span>Ing A. Manuel Eduardo Suarez Blanco</span>
+			<br><br>
+			<span>Universidad de Santander</span>
+			<br><br>
+			<span>Selecciona una opción para continuar.</span>
+		</div>
+
+		<!-- Contenido de las vistas -->
+		<div class="view1">
+
+			<div class="view11">
+
+				<div class="bts">
+
+					<div class="Selmod">
+						
+					<button id="btn1">
+						<span>Modelos de Evaluacion de Calidad</span>
+						
+						
+					</button>
+
+
+					<button id="btn5" class="bt55">Seleccionando Modelos  de Evaluacion</button>
+
+
+					<button id="btn3" class="bt33">RED</button>
+
+					</div>
+
+					
+				</div>
+
+				<div class="view22">
+
+						<b class="t1">Modelos de Evaluacion y RED</b>
+
+
+
+
+
+						<div class="boxx1">
+
+							<br><b>Modelos de Evaluacion de Calidad de Recursos educativos digitales.</b>
+							<div class="Onbx">
+
+
+							<div class="bxn1">
+								<div class="num11">
+									<div class="num1">1</div>
+									<span>⭐⭐⭐⭐⭐</span>
+								</div>
+
+								<span class="gr-1"><b>LORI Learning Object Review Instrument</b></span>
+								<br>
+								
+								<span class="gr-2"><b>Descripcion:</b><br>
+									<span class="y2">Desarrollado en 2002 por docentes investigadores de la Universidad Simon Fraser. <br>
+									Es un modelo de participacion que evalua recursos educativos digitales. <br>
+									Permite dar una opinion segun el recurso, por medio de una escala de 5 estrellas de valoracion. <br>
+									Tiene una escala de concordancia con los items evaluados para medir la calidad del RED.</span>
+								</span><br>
+
+								<span class="gr-3">
+									<b>Criterios de valuacion:</b>
+									<ol>
+										<li>Calidad de los contenidos</li>
+										<li>Adecuacion de los objetivos de aprendeizaje</li>
+										<li>Retroalimentacion</li>
+										<li>Adaptabilidad de contenidos</li>
+										<li>Motivacion</li>
+										<li>Presentacion y diseño</li>
+										<li>Usabilidad</li>
+										<li>Reuso</li>
+										<li>Cumplimiento de estandares</li>
+									</ol>
+								</span>
+								<br>
+
+								<span class="gr-4">
+									<b>Escala de Valoracion:</b>
+									<br>
+									Se evalua por medio de 5 Estrellas. <br>
+									<span>⭐⭐⭐⭐⭐</span> <br>
+									Con una escala: <br>
+									<b>Muy Bueno</b> <span>90 puntos</span> <span>⭐⭐⭐⭐⭐</span>
+									<b>Bueno</b> <span>80-89 puntos</span> <span>⭐⭐⭐⭐</span><br>
+									<b>Aceptable</b> <span>60-79 puntos</span> <span>⭐⭐⭐</span><br>
+									<b>Pobre</b> <span>40-59 puntos</span> <span>⭐⭐</span><br>
+									<b>N/A</b> <span>⭐</span>
+
+								</span><br>
+								<span class="gr-5">
+									<b>Metodología:</b><br>
+									<span>Esta basado en la cuantificacion por medio de uan escala de 1-5 por medio de unos puntos que determinan la calidad de los items evaluados</span>
+								</span>
+									<br>
+								<span class="gr-6"><b>Instrumentos de Evaluacion:</b></span><br>
+								<span>Lista de cotejo basada en 8 criterios.</span>
+
+							</div>
+
+
+							<div class="bxn2">
+								
+								<div class="num2"><div class="nu2">2</div></div>
+
+								<div class="tt1"><b>Reeves</b></div>
+
+								<div class="texR1">
+									<b>Descripcion</b>
+									<br>
+									<span>Segun Reeves (2001), "los ambientes virtuales de aprendizaje generan un potencial en la calidad academica evaluada de forma presencial y a distancia, las alternaticas para mejorar la evaluacion de un ambiente virtual tiene como objetivo el nivel de alienacion de la educacion.</span>
+								</div>
+
+								<div class="texR2">
+									<b>Criterios de Evaluacion</b><br>
+									<ol>
+										<li><b>Relevancia:</b><span>Evalua el contenido del RED con las experecnias formativas del conocimiento y de la subjetividad del estudiante basado en su conocimientos</span></li>
+										<li><b>Autencidad:</b><span>Evalua la calidad y realismo del entorno.</span></li>
+										<li><b>Participacion activa:</b><span>Evalua la participacion e interaccion del aprendizaje del estudiante con el RED</span></li>
+										<li><b>Reflexion:</b><span>Evalua la capacidad de desarrollar un analisis cogitivo en el pensamiento del estudiante</span></li>
+										<li><b>Coherencia narrativa:</b><span>Evalua la secuencia logica de los procesos estructurados del RED</span></li>
+
+									</ol>
+								</div>
+								<div class="texR3">
+									<b>Escala de Valoracion</b><br>	
+										<span>	
+											<ul>	
+												<li>1. Muy Bajo	</li>
+												<li>2. Bajo	</li>
+												<li>3. Moderado	</li>
+												<li>4. Alto	</li>
+												<li>5. Muy Alto	</li>
+											</ul>
+										</span>
+
+								</div>
+								<div class="texR4"><b>Metodologia</b><br>
+									<span>Se evalua el RED por medio de variables cualitativas y cuantitativas con observacion dirrecta, encuestas,  analisis de datos para obtener como resultado el analisis motivacional de emociones de los usurio que aplicaron el RED.</span>
+
+								</div>
+								<div class="texR5"><b>Instrumento de Evaluacion</b><br>
+									<span>Se aplican encuestas estrcuturadas por medio de item que aborden los criterios de interaccion. la encuesta incluye preguntas especificas para evaluar las motivaciones emocionales del estudiante.</span>
+
+								</div>
+
+							</div>
+
+
+
+
+
+							<div class="bxn3">
+								<div class="num3"><div class="nu3">3</div></div>
+								<div class="tt2" ><b>CODA Calidad de los Objetos de Aprendizaje</b></div>
+								<div class="texCODA1"><b>Descripcion</b><br><span>Este modelo es una guia para evlualar la calidad y creacion de <b>OA (Objetos de Aprendizaje)</b>, evalua 10 criterios o items en dos categorias una Pedagogica y la segunda Tecnologica.</span></div>
+								<div class="texCODA2"><b>Criterios de Evaluacion</b><br><span>Los Items que evalua CodA son:</span><br><br>
+									<b>1. Criterios Pedagógicos</b>
+									<ul>
+										<li>Objetivos y coherencia didáctica</li>
+										<li>Calidad de los contenidos</li>
+										<li>Capacidad de generar reflexion, analisis e innovacion</li>
+									</ul>
+									<b>2. Criterios Tecnologicos</b>
+									<ul>
+										<li>Formato y Diseño</li>
+										<li>Usabilidad</li>
+										<li>Accesibilidad</li>
+										<li>Reusabilidad</li>
+									</ul>
+								</div>
+
+								<div class="texCODA3">
+									<b>Escala de Valoracion</b><br>
+									<span>1-2 Bajo</span><br>
+									<span>3-4 Medio</span><br>
+									<span>5 Alto</span>
+								</div>
+
+								<div class="texCODA4">
+									<b>Metodologia</b><br>
+									<span>Dentro de los 10 Items que se evluan se tiene encuenta las tecnicas de evaluacion,, la revision documental, la observacion directa del uso del software, encuentas a usuarios sobre el uso, entre otros elementos que ayuda a evaluar de manera precisa.</span><br>
+								</div>
+								<div class="texCODA5"><b>Instrumento de Evaluacion</b><br>
+									<span>El modelo COdA usa listas de verificacion de las variables cualitativas  cuantitativas con el fin de tener formatos estructurados que faciliten la evaluacion de los recursos por medio de los Items.</span>
+								</div>
+
+							</div>
+
+
+
+
+
+
+
+
+							<div class="bxn4">
+								<div class="num4"><div class="nu4">4</div></div>
+								<div class="tt3" ><b>Norma Une 71362</b></div>
+
+								<div class="texNor1">
+									<b>Descripcion</b><br>
+									<span>Esta norma tiene como objetivo evaluar recursos digitales con el fin de verificar estandares pedagogicos y tecnologicos para el contexto educativo. La norma evalua la calidad y efectividad de los RED.</span>
+								</div>
+								<div class="texNor2">
+									<b>Criterios de Evaluacion</b><br>
+									<span>Este modelo icluye criterios como:</span><br>
+									<ul>
+										<li>Descripcion didactica</li>
+										<li>Calidad de los Contenidos</li>
+										<li>Capacidad para generar aprendizaje</li>
+										<li>Adaptabilidad</li>
+										<li>Interactividad</li>
+										<li>Motivacion</li>
+										<li>Formato y diseño</li>
+										<li>Portabilidad</li>
+										<li>Estabilidad técnica</li>
+										<li>Navegacion</li>
+										<li>Operabilidad</li>
+										<li>Accesibilidad</li>
+									</ul>
+								</div>
+								<div class="texNor3">
+									<b>Escala de Valoracion</b><br>
+									<span>Este modlo evalua al docente y al estudiante de forma que los perfisles de los docentes funcionan en el uso y creacion del RED y desde el perfil del estudiante se evalua la interactividad y uso del programa asi como la percepcio y operabilidad</span><br>
+									<span>El perfil de docente evalua 15 items y el perfil del estudiante evalua 14 items con dos preguntas abiertas</span><br>
+									<span>Los item tiene una valoracion y una puntuacion de 0 a 10 puntos, donde Cero 0 es el minimo valo y 10 es el maximo numero en la valoracion.</span>
+								</div>
+								<div class="texNor4">
+									<b>Metodologia</b><br>
+									<span>Se hace un revision tecnica de los documentos pruebas tecnicas, encuestas de uso y percepcion, evaluacion y prueba de los Software, con el fin de analizar y determinar la informacion de uso, la norma UNE 71362, verifica la calidad de los recursos educativos para el beneficio de los usurios.</span>
+								</div>
+								<div class="texNor5">
+									<b>Instrumento de Evaluacion</b><br>
+									<span>
+										Los instrumentos de evaluacion estan basados en lso requisitos y directrices evaluados por la Norma UNE 71362, por medio de la verificacion y obtencion de los datos, las matrices elaboradas evluan el funcionamiento y cumplimiento de los items.
+									</span>
+								</div>
+							</div>
+
+
+
+							<div class="bxn5">
+								<div class="num5"><div class="nu5">5</div></div>
+								<div class="tt4" ><b>Furps Funcionalidad, Usabilidad, Fiabilidad, Rendimiento y Soportabilidad</b></div>
+								<div class="texF1"><b>Descripcion</b><br><span>Esta diseñado para evaluar y mejorar las caracteristicas que componen el rendimeneoto  de un RED empresarial. Con el fi de analizar las posibles conplicaciones que pueda presentar, las fallas no son presentacion de un RED Empresarial.</span></div>
+								<div class="texF2">
+									<b>Criterios de Evaluacion</b><br>
+									<span>Evalua 5 caracteristicas:	</span><br>
+									<span>Funcionalidad F / Usabilidad U / Fiabilidad R / Rendimiento P / Soportabilidad S</span><br><br>
+									<ol>
+										<li><b>Funcionalidad F:</b>Gestion de dispositivos y recuros de acceso y seguridad de usurios.</li>
+										<li><b>Usabilidad U:</b> Interfaz de gestion de recursos documentos y accesibilidad</li>
+										<li><b>Fiabilidad R:</b> Posibles fallos que no afecten la interaccion y el rendimiento P, disponibilidad de recursos como internet.</li>
+										<li><b>Soportabilidad S:</b> Compatibilidad entre los mantenimientos y actualizaciones del programa.</li>
+									</ol>
+								</div>
+								<div class="texF3">
+									<b>Escala de Valoracion</b><br>
+									<span>Emplea la escala Likert de 1-5</span><br>
+									<ul>
+										<li>1: Muy Insatisfecho</li>
+										<li>2: Insatisfecho</li>
+										<li>3: Neutral</li>
+										<li>4: Satisfactorio</li>
+										<li>5: Muy Satisfactorio</li>
+									</ul>
+								</div>
+								<div class="texF4">
+									<b>Metodologia</b>
+									<ol>
+										<li><b>Recopilacion de Datos</b></li>
+										<li><b>Encuestas y Entrevistas</b></li>
+										<li><b>Analaisis de Registros</b></li>
+										<li><b>Pruebas de Estres</b></li>
+										<li><b>Revision de Documentacion</b></li>
+
+									</ol>
+								</div>
+								<div class="texF5">
+									<b>Instrumento de Evaluacion</b><br>
+									<span>Por medio de cuestionarios de evaluan las caracteristicas de los RED</span><br>
+									<b>Funcionalidad</b>
+									<ol>
+										<li>¿La red permite una gestion adecuada de los dispositios conectados?</li>
+										<li>¿El sistema de gestion de ususrio es funcional y tiene seguridad?</li>
+										<li>¿La actualizacion del RED tiene un codigo robusto de seguridad?</li>
+									</ol>
+
+									<b>Usabilidad</b>
+									<ol>
+										<li>¿La interfaz de gestion de la red es intuitiva y facil de usar?</li>
+										<li>¿la interfaz es clara y completa para interactuar?</li>
+										<li>¿Los administradores acceden de forma adecuada y rapida?</li>
+									</ol>
+
+
+									<b>Fiabilidad</b>
+									<ol>
+										<li>¿La red tiene la capacidad para la interactiidad?</li>
+										<li>¿La red soporta fallos sin interumpir el uso?</li>
+										<li>¿El sistema detecta y notifica los fallos?</li>
+									</ol>
+
+
+									<b>Rendimiento</b>
+									<ol>
+										<li>¿La red cuenta con el ancho suficiente para soportar la aplicacion?</li>
+										<li>¿La latencia en la red en minima y aceptable para el uso?</li>
+										<li>¿La red notifica fallos de rendimiento?</li>
+									</ol>
+
+
+
+									<b>Soportabilidad</b>
+									<ol>
+										<li>¿La red es compatible cons otros sistemas, protocolos y estandares operativos?</li>
+										<li>¿Las actualizacions y soluciones se aplican rapidamente sin generar inconvenientes?</li>
+										<li>¿La red puede solucionar problemas o manteniiento de manera eficiente?</li>
+									</ol>
+
+
+								</div>
+							</div>
+
+
+
+
+							<div class="bxn6">
+								<div class="num6"><div class="nu6">6</div></div>
+								<div class="tt5" ><b>McCall</b></div>
+
+								<div class="texMc1">
+									<b>Descripcion</b><br>
+									<span>Este Modelo Evalua la calidad de los productos generados por software, se centra en tres atributos de calidad: La Operabilidad, La Revisabilidad y la Transcionalidad</span>
+								</div>
+								<div class="texMc2">
+									<b>Criterios de Evaluacion</b><br>
+									<br><br>
+									1. <b>Operabilidad Product Operation</b>
+									<ul>
+										<li><b>Coreccion:</b>Precision del contenido para el aprendizaje</li>
+										<li><b>Eficiencia:</b>Uso eficiiente de los recursoso del sistema</li>
+										<li><b>Integridad:</b>Seguridad del software a accesos no autorizados</li>
+										<li><b>Usabilidad:</b>Facilidad en la interaccio del uso del software</li>
+
+									</ul>
+									2. <b>Revisabilidad Product Revision</b>
+									<ul>
+										<li><b>Mantenibilidad:</b>Codificacion del software entendible para mejorar o corregir errores</li>
+										<li><b>Felxibilidad:</b>Capacidad del Software para operar en multiplataformas</li>
+										<li><b>Testabilidad:</b>El software debe poder ser revisado para su evaluacion</li>
+									</ul>
+
+									3. <b>Transicionalidad Product Transition</b>
+									<ul>
+										<li><b>Portabilidad:</b>Acceso del software para ser tranferido de un entorno a otro equipo</li>
+										<li><b>Interoperabilidad:</b>El software puede interacturar con otros sistemas operativos</li>
+										
+									</ul>
+
+								</div>
+								<div class="texMc3">
+									<b>Escala de Valoracion</b>
+									<br>
+						
+										<label>1 Muy Deficiente</label><br>
+										<label>2 Deficiente</label><br>
+										<label>3 Aceptable</label><br>
+										<label>4 Bueno</label><br>
+										<label>5 Excelente</label>
+							
+								</div>
+								<div class="texMc4">
+									<b>Metodologia</b><br>
+									<ol>
+										<li><b>Seleccion del Software:</b>Identificar la informacion del programa.</li>
+										<li><b>Definicion del  Objetivo de Evaluacion</b>Estblecer el alcance al cual se desea llegar</li>
+										<li><b>Aplicacion del Modelo de McCall</b>Evaluar cada item de calidad del software por medio de la escala definida.</li>
+										<li><b>Recoleccion de Datos:</b>Toma de datos e infromacion detallada de los items evaluados.</li>
+										<li><b>Analisis de Resultados:</b>Analizar la informacion recolecta, interpretar las debilidades  fortalezas encontradas.</li>
+										<li><b>Informe de Evaluacion:</b>Elaborar el documento que informe la evaluacion realizada con sus conclusiones.</li>
+
+									</ol>
+
+								</div>
+								<div class="texMc5">
+									<b>Instrumento de Evaluacion</b><br>
+									<span>Los siguientes items se tienen encuenta para evaluar software educativo basados en la Operabilidad, Revisabilidad y Transcionalidad:</span><br><br>
+									<b>Operabilidad</b>
+									<ul>
+										<li>¿El software cumple con las funciones especificas ? </li>
+										<li>¿El software usa los recursos del sistema de manera eficiente ?</li>
+										<li>¿El software tine seguridad contra accesos no autorizados?</li>
+										<li>¿El software es facil de usar por el usurio?</li>
+									</ul>
+									<b>Revisabilidad</b>
+									<ul>
+										<li>¿El software es facil de mantener y modificarr?</li>
+										<li>¿El software se adapta facil a los requerimientos de los sistemas?</li>
+										<li>¿El software es facil de probar y analizar para evaluar su calidad?</li>
+									</ul>
+									<b>Transicionalidad</b>
+									<ul>
+										<li>¿El software puede ser tranferido entre sistemas?</li>
+										<li>¿Los requerimientos del software son usados por el sistema?</li>
+										<li>¿El software interactua con otros sistemas?</li>
+									
+									</ul>
+								</div>
+							</div>
+
+
+
+
+							</div>
+							
+						</div>
+
+
+
+
+
+
+
+						
+
+
+						<div class="boxx2">
+							<b class="t2">Recurso 2 Seleccionado:</b>
+							<div class="icom2">
+								<p class="ico1">🧠 <br>🧬 <br> 👨‍🏫 <br> 🧫</p>
+							</div>
+							<br>
+
+							<div class="scroll-container textxx">
+						        <div class="grid">
+						            <!-- Elementos del Grid -->
+						            <div class="grid-item">
+						            <span>Cápsulas Educativas <br> Colombia Aprende</span>
+						            <b>Nombre RED</b>
+						        	</div>
+						            <div class="grid-item">
+						            	<span>Ciencias Naturales - Quimica</span>
+						            	<b>Área de conocimiento</b>
+						        	</div>
+						            <div class="grid-item">
+						            	<span>Educacion básica: Grados 6° - 9° </span>
+						            	<b>Nivel o grado de aplicación.</b></div>
+						            <div class="grid-item">
+						            	<span>Ministerio de Educacion Nacional de Colombia</span>
+						            	<b>Datos del autor</b>
+						            </div>
+						            
+						            <div class="grid-item">
+						            	<span class="tex1"> https://contenidosparaaprender.colombiaaprende.edu.co/</span>
+						            	<b>Enlace al RED</b>
+						            </div>
+						            <div class="grid-item grid12">
+						            	<span class="c1">Este recurso integra tecnologias de la informacion y aprendizaje por medio de contenidos interactivos y dinamicos como libros, videos y simuladores</span>
+						            	<b>Descripción del RED.</b>
+						            </div>
+						            <div class="grid-item grid13">
+						            	<span class="c3">* Diseñada para ser usadas en el aula y en casa.
+						            		<br>
+						            	* Incluye actividades interactivas y evaluativas por medio de la participacion.
+						            	</span>
+						            	<b>Características del RED y posibilidades de uso.</b>
+						            </div>
+						            <div class="grid-item">
+						            	<span>Conexion a Internet</span>
+						            	<b>Limitaciones del RED.</b>
+						            </div>
+						            <div class="grid-item">
+						            	<span></span>
+						            	<b>Verificación de estándares en el RED.</b>
+						            </div>
+						            <div class="grid-item grid11">
+						            	<span class="imgcap2"></span>
+						            	<b>Captura de pantalla o imagen del RED</b>
+						            </div>
+						            
+						        </div>
+						    </div>
+
+						</div>
+
+
+						<div class="boxx4">
+							<b class="t2">Recurso 1 Seleccionado:</b>
+							<div class="icom1"><p class="ico1">🧪 <br>⚗️ <br> 🦠 <br> 👨‍🔬</p></div>
+								<br>
+
+							<div class="scroll-container textxx">
+								        <div class="grid">
+								            <!-- Elementos del Grid -->
+								            <div class="grid-item">
+								            <span>Educatina <br> Colección de Química</span>
+								            <b>Nombre RED</b>
+								        	</div>
+								            <div class="grid-item">
+								            	<span>Ciencias Naturales - Quimica</span>
+								            	<b>Área de conocimiento</b>
+								        	</div>
+								            <div class="grid-item">
+								            	<span>Educacion básica: Grados 8° - 9° -10° <br> Educacion Media: 11°</span>
+								            	<b>Nivel o grado de aplicación.</b></div>
+								            <div class="grid-item">
+								            	<span>Ministerio de Educacion Nacional de Colombia</span>
+								            	<b>Datos del autor</b>
+								            </div>
+								            
+								            <div class="grid-item">
+								            	<span class="tex1"> https://www.educatina.com/r?categoria=ciencias&subcategoria=quimica&rama=quimica-inorganica</span>
+								            	<b>Enlace al RED</b>
+								            </div>
+								            <div class="grid-item">
+								            	<span>Recurso conformado por grupos de videos, simuladores, libros guias con actividades</span>
+								            	<b>Descripción del RED.</b>
+								            </div>
+								            <div class="grid-item">
+								            	<span></span>
+								            	<b>Características del RED y posibilidades de uso.</b>
+								            </div>
+								            <div class="grid-item">
+								            	<span>Conexion a Internet</span>
+								            	<b>Limitaciones del RED.</b>
+								            </div>
+								            <div class="grid-item">
+								            	<span></span>
+								            	<b>Verificación de estándares en el RED.</b>
+								            </div>
+								            <div class="grid-item grid11">
+								            	<span class="imgcap"></span>
+								            	<b>Captura de pantalla o imagen del RED</b>
+								            </div>
+								            
+								        </div>
+								</div>
+
+						</div>
+
+
+						<div class="boxx5">
+
+							<div class="dvtxt">
+
+							<b>Modelos Seleccionados </b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Instrumentos de Evaluacion </b>
+							<br><br>
+
+								<div class="txtSel">
+									<div class="Inst">Norma Une 71362</div>
+
+									<div class="grdInst">
+
+
+
+								
+
+										<div class="txtInst"><p>Verificacion y obtencion de los datos</p></div>
+										<div class="txtInst"><p>Matriz de Evaluacion de funcionamiento</p></div>
+										<div class="txtInst  "><p class="tx3">Evaluacion de accesibilidad</p></div>
+										<div class="txtInst"><p>Encuestas y retroalimentación de usuarios</p></div>
+										<div class="txtInst"></div>
+
+
+									</div>
+
+								</div><br><br>
+								
+								<div class="txtSel">
+									<div class="Inst">Modelo LORI</div>
+									<div class="grdInst">
+
+										
+
+
+										<div class="txtInst"><p>Calidad de los Contenidos</p></div>
+										<div class="txtInst"><p>Adecuacion de los Objetivos de Aprendizaje</p></div>
+										<div class="txtInst"><p>Feedback</p></div>
+										<div class="txtInst"><p>Motivacion</p></div>
+										<div class="txtInst"></div>
+
+
+									</div>
+
+								</div><br><br>
+								<div class="txtSel">
+									<div class="Inst">Modelo COdA</div>
+									<div class="grdInst">
+
+										
+
+
+										<div class="txtInst"><p>Objetivos y coherenica didactica</p></div>
+										<div class="txtInst"><p>Calidad de los contenidos</p></div>
+										<div class="txtInst"><p>Interactividad y adaptabilidad</p></div>
+										<div class="txtInst"><p>Motivación</p></div>
+										<div class="txtInst"></div>
+
+
+									</div>
+
+								</div>
+								
+							</div>
+							
+						</div>
+
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<div class="boxx3">
+
+							<div class="bxtxt">
+
+								<div class="textO">
+								<p>Seleccione un RED de la lista</p>
+								</div>
+							
+							<div class="divbt">
+								<button id="btn4" class="btS1">
+									<span>Seleccionando Modelos</span>
+									<br>
+									<span>RED 1</span>
+								</button>	
+								
+								<button id="btn2" class="btS1">
+									<span>Seleccionando Modelos</span>
+									<br>
+									<span>RED 2</span>
+								</button>
+							</div>
+
+							<div class="video1">
+								
+							</div>
+
+							
+
+
+
+
+							</div>
+
+							
+
+
+						</div>
+
+				</div>
+
+
+			</div>
+
+
+			<button class="close" onclick="cerrarVentana(1)">X</button> <!-- Botón de cierre -->
+
+
+		</div>
+
+
+
+
+		<div class="view2">
+			<p>Contenido de la Vista 2</p>
+			<button class="close" onclick="cerrarVentana(2)">X</button> <!-- Botón de cierre -->
+		</div>
+		<div class="view3">
+			<p>Contenido de la Vista 3</p>
+			<button class="close" onclick="cerrarVentana(3)">X</button> <!-- Botón de cierre -->
+		</div>
+		<div class="view4">
+			<p>Contenido de la Vista 4</p>
+			<button class="close" onclick="cerrarVentana(4)">X</button> <!-- Botón de cierre -->
+		</div>
+		<div class="view5">
+			<p>Contenido de la Vista 5</p>
+			<button class="close" onclick="cerrarVentana(5)">X</button> <!-- Botón de cierre -->
+		</div>
+
+	</div>
+
+</div>
+
+<script>
+	// Función para mostrar la ventana correspondiente
+	function mostrarVentana(num) {
+		// Ocultar todas las vistas
+		for (let i = 1; i <= 5; i++) {
+			document.querySelector('.view' + i).style.display = 'none';
+		}
+
+		// Ocultar el mensaje de bienvenida
+		document.querySelector('.viewes').style.display = 'none';
+
+		// Mostrar la vista correspondiente
+		document.querySelector('.view' + num).style.display = 'block';
+	}
+
+	// Función para cerrar la ventana correspondiente
+	function cerrarVentana(num) {
+		// Ocultar la vista correspondiente
+		document.querySelector('.view' + num).style.display = 'none';
+
+		// Mostrar el mensaje de bienvenida de nuevo si no hay más vistas abiertas
+		let isAnyViewOpen = false;
+		for (let i = 1; i <= 5; i++) {
+			if (document.querySelector('.view' + i).style.display === 'block') {
+				isAnyViewOpen = true;
+				break;
+			}
+		}
+
+		if (!isAnyViewOpen) {
+			document.querySelector('.viewes').style.display = 'block';
+		}
+	}
+
+
+
+	 // Obtener los botones y los divs
+        const buttons = document.querySelectorAll('.bts button');
+        const box1 = document.querySelector('.boxx1');
+        const box2 = document.querySelector('.boxx2');
+        const box3 = document.querySelector('.boxx3');
+        const box4 = document.querySelector('.boxx4');
+        const box5 = document.querySelector('.boxx5');
+
+        // Función para mostrar el div correspondiente y resaltar el botón activo
+        function showBox(selectedButton, boxToShow) {
+            // Ocultar todos los divs
+            box1.style.display = 'none';
+            box2.style.display = 'none';
+            box3.style.display = 'none';
+            box4.style.display = 'none';
+            box5.style.display = 'none';
+
+            // Quitar la clase 'active' de todos los botones
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // Mostrar el div seleccionado
+            boxToShow.style.display = 'block';
+
+            // Agregar la clase 'active' al botón seleccionado
+            selectedButton.classList.add('active');
+        }
+
+        // Asignar eventos a los botones
+        document.getElementById('btn1').addEventListener('click', function() {
+            showBox(this, box1);
+        });
+
+        document.getElementById('btn2').addEventListener('click', function() {
+            showBox(this, box2);
+        });
+
+        document.getElementById('btn3').addEventListener('click', function() {
+            showBox(this, box3);
+
+        });
+
+        document.getElementById('btn4').addEventListener('click', function() {
+            showBox(this, box4);
+        
+        });
+
+        document.getElementById('btn5').addEventListener('click', function() {
+            showBox(this, box5);
+        
+        });
+
+        // Mostrar el div correspondiente al Botón 1 por defecto
+        showBox(document.getElementById('btn1'), box1);
+    </script>
+</script>
+
+</body>
+</html>
