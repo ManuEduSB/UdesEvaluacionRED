@@ -292,15 +292,16 @@
             text-align: center;
             border: 1px solid #ccc;
             display: grid;
-            grid-template-rows: 85px 40px;
+            grid-template-rows: 1fr 50px;
+            place-items: center;
         }
 
-        .grid11 {grid-column: 1/4; grid-template-rows: 170px 30px;}
+        .grid11 {grid-column: 1/4; grid-template-rows: 1fr 30px;}
         .grid12 table, th, td {  border: 1px solid black;}
-        .grid122 {grid-column: 1/4; grid-template-rows: 240px 30px;}
-        .grid12 { grid-template-rows: 110px 24px; }
-        .grid13 { grid-template-rows: 130px 24px; }
-        .grid-item  b { font-size:14px; font-family:aial; }
+        .grid122 {grid-column: 1/4; grid-template-rows: 1fr 30px;}
+        .grid12 { grid-template-rows: 1fr 46px; }
+        .grid13 { grid-template-rows: 1fr 46px; }
+        .grid-item  b { font-size:15px; font-family:aial; }
         .tex1 {font-size: 13px;  width: 156px;  padding-top: 16px; word-wrap: break-word;}
 
 
@@ -333,8 +334,8 @@
 				      }
 				    }
 
-		.imgcap {background-image: url('Captura.png');}
-		.imgcap2 {background-image: url('Captura2.png');}
+		.imgcap {    max-width: 100%;    height: auto;    display: block;}
+		.imgcap2 {    max-width: 100%;    height: auto;    display: block;}
 
 		
 		.Onbx { display: grid; grid-template-rows: 190px 190px 190px 190px 190px 190px; grid-template-columns:770px; grid-row-gap: 15px; overflow-y: auto; height: 427px;}
@@ -873,33 +874,33 @@
 						        <div class="grid">
 						            <!-- Elementos del Grid -->
 						            <div class="grid-item">
-						            <span>Cápsulas Educativas <br> Colombia Aprende</span>
+						            <span>MSD manuals <br> Merck & Co, Inc., </span>
 						            <b>Nombre RED</b>
 						        	</div>
 						            <div class="grid-item">
-						            	<span>Ciencias Naturales - Quimica</span>
+						            	<span>Ciencias Naturales</span>
 						            	<b>Área de conocimiento</b>
 						        	</div>
 						            <div class="grid-item">
-						            	<span>Educacion básica: Grados 6° - 9° </span>
+						            	<span>Educacion básica: Grados 8° </span>
 						            	<b>Nivel o grado de aplicación.</b></div>
 						            <div class="grid-item">
-						            	<span>Ministerio de Educacion Nacional de Colombia</span>
+						            	<span>Merck & Co, Inc.,  es una empresa farmacéutica multinacional estadounidense con sede en Rahway, Nueva Jersey.</span>
 						            	<b>Datos del autor</b>
 						            </div>
 						            
 						            <div class="grid-item">
-						            	<span class="tex1"> https://contenidosparaaprender.colombiaaprende.edu.co/</span>
+						            	<a class="tex1" href="https://www.msdmanuals.com/es/hogar/multimedia/3dmodel/sistema-muscular"  target="_blank"> https://www.msdmanuals.com/es/hogar/multimedia/3dmodel/sistema-muscular</a>
 						            	<b>Enlace al RED</b>
 						            </div>
 						            <div class="grid-item grid12">
-						            	<span class="c1">Este recurso integra tecnologias de la informacion y aprendizaje por medio de contenidos interactivos y dinamicos como libros, videos y simuladores</span>
+						            	<span class="c1">Este recurso integra tecnologias de la informacion y aprendizaje por medio de contenidos interactivos y dinamicos con un simulador interactivo del cuerpo humanos, en diferestes funciones y sistemas. Por medio de este simulador del cuerpo humano se complementan las clases de los diferentes sistemas, en este caso el sistema muscular, se puede seleciconar e intracturar con las diferentes partes del cuerpo, lo que es util para que el estudiante reconozca las estructuras del cuerpo.</span>
 						            	<b>Descripción del RED.</b>
 						            </div>
 						            <div class="grid-item grid13">
 						            	<span class="c3">* Diseñada para ser usadas en el aula y en casa.
 						            		<br>
-						            	* Incluye actividades interactivas y evaluativas por medio de la participacion.
+						            	* Incluye un simulador interactivo el cual es accesible por medio de conexion a internet.
 						            	</span>
 						            	<b>Características del RED y posibilidades de uso.</b>
 						            </div>
@@ -912,65 +913,36 @@
 						            	<b>Verificación de estándares en el RED.</b>
 						            </div>
 						            <div class="grid-item grid11">
-						            	<span class="imgcap2"></span>
+						            	
+						            	<img class="imgcap2" src="Captura2.png" >
 						            	<b>Captura de pantalla o imagen del RED</b>
 						            </div>
 						            
-						        </div>
-						    </div>
 
-						</div>
+								            <div class="grid-item grid11 grid122">
 
 
-						<div class="boxx4">
-							<b class="t2">Recurso 1 Seleccionado:</b>
-							<div class="icom1"><p class="ico1">🧪 <br>⚗️ <br> 🦠 <br> 👨‍🔬</p></div>
-								<br>
 
-							<div class="scroll-container textxx">
-								        <div class="grid">
-								            <!-- Elementos del Grid -->
-								            <div class="grid-item">
-								            <span>Simulador Laboratorio de mezclas quimicas</span>
-								            <b>Nombre RED</b>
-								        	</div>
-								            <div class="grid-item">
-								            	<span>Ciencias Naturales - Quimica</span>
-								            	<b>Área de conocimiento</b>
-								        	</div>
-								            <div class="grid-item">
-								            	<span>Educacion básica: 8°</span>
-								            	<b>Nivel o grado de aplicación.</b></div>
-								            <div class="grid-item">
-								            	<span>Colombia aprende</span>
-								            	<b>Datos del autor</b>
-								            </div>
-								            
-								            <div class="grid-item">
-								            	<a class="tex1"href="https://contenidosparaaprender.colombiaaprende.edu.co/G_4/S/S_G04_U02_L01/S_G04_U02_L01_03_03.html"></a>
-								            	<b>Enlace al RED</b>
-								            </div>
-								            <div class="grid-item">
-								            	<span>Recurso conformado por un simulador del laboratorio de quimica baado en la separacion de mezclas, interactivo e intuitivo para el desarrollo.</span>
-								            	<b>Descripción del RED.</b>
-								            </div>
-								            <div class="grid-item">
-								            	<span></span>
-								            	<b>Características del RED y posibilidades de uso.</b>
-								            </div>
-								            <div class="grid-item">
-								            	<span>Conexion a Internet</span><br>
-								            	<span>Se limita el contenido a grado 8</span><br>
-								            	<span></span>
-								            	<b>Limitaciones del RED.</b>
-								            </div>
-								            <div class="grid-item">
-								            	<span></span>
-								            	<b>Verificación de estándares en el RED.</b>
-								            </div>
-								            <div class="grid-item grid11">
-								            	<span class="imgcap"></span>
-								            	<b>Captura de pantalla o imagen del RED</b>
+
+								            	<ul>
+								            		<li><b>Ventajas</b></li>
+								            		<li>Enfoque Personalizado: Permite adaptar la evaluación a las necesidades individuales de cada estudiante, reconociendo sus diferentes estilos de aprendizaje y ritmos.</li>
+								            		<li>Fomento de la Autonomía: Al involucrar a los estudiantes en su propio proceso de evaluación, se promueve la autonomía y la responsabilidad en su aprendizaje.</li>
+								            		<li>Desarrollo de Habilidades Críticas: Este modelo ayuda a los estudiantes a desarrollar habilidades críticas y reflexivas, ya que deben analizar su propio desempeño y establecer metas de mejora.</li>
+								            		<li>Retroalimentación Constructiva: Facilita la entrega de retroalimentación continua y constructiva, lo que permite a los estudiantes comprender mejor sus logros y áreas de mejora.</li>
+								            	
+								            		<li>Motivación Aumentada: Al hacer que los estudiantes participen activamente en su evaluación, se incrementa su motivación y compromiso con el aprendizaje.</li>
+								            		<li>Mejora del Clima Escolar: Fomenta un ambiente de confianza y colaboración entre docentes y estudiantes, lo que puede mejorar el clima escolar en general.</li>
+								            		<li>Facilitación del Aprendizaje Colaborativo: Promueve el trabajo en equipo y la colaboración entre estudiantes, lo que enriquece el proceso de aprendizaje.</li>
+								            		<br>
+								            		<li><b>Limitaciones	</b></li>
+								            		<li>Escasa Interacción y Seguimiento Personalizado Limitación: Colombia Aprende no ofrece una herramienta robusta de seguimiento del progreso o interacción directa entre el estudiante y el profesor dentro de la plataforma. Impacto: Sin la capacidad de monitorear y ajustar el aprendizaje de los estudiantes, los docentes tienen menos herramientas para ver el avance de los estudiantes y para ajustar el apoyo en áreas específicas, lo que sería ideal para grupos con habilidades y conocimientos diversos.</li><br>
+													<li><b>VERIFICACIÓN DE ESTÁNDARES EN EL RED </b></li>
+													<li> Evaluación Continua y Retroalimentación Descripción: Los contenidos deben ser evaluados continuamente para adaptarse a los cambios en el currículo y responder a la retroalimentación de los docentes y estudiantes. Verificación: El Ministerio de Educación realiza evaluaciones periódicas y recoge opiniones de los usuarios para actualizar los contenidos, eliminando material desactualizado o poco efectivo.
+													</li>
+								            	</ul>			            
+ 
+															
 								            </div>
 
 								            <div class="grid-item grid11 grid122">
@@ -1010,17 +982,6 @@
 
 								            </div>
 
-								            <div class="grid-item grid11 grid122">
-								            
-								            				Enfoque Personalizado: Permite adaptar la evaluación a las necesidades individuales de cada estudiante, reconociendo sus diferentes estilos de aprendizaje y ritmos.
-								            				Fomento de la Autonomía: Al involucrar a los estudiantes en su propio proceso de evaluación, se promueve la autonomía y la responsabilidad en su aprendizaje. Desarrollo de Habilidades Críticas: Este modelo ayuda a los estudiantes a desarrollar habilidades críticas y reflexivas, ya que deben analizar su propio desempeño y establecer metas de mejora.
-															Retroalimentación Constructiva: Facilita la entrega de retroalimentación continua y constructiva, lo que permite a los estudiantes comprender mejor sus logros y áreas de mejora.
-															Evaluación Integral: Considera no solo el conocimiento académico, sino también aspectos emocionales y sociales, lo que contribuye a un desarrollo más completo del estudiante.
-															Motivación Aumentada: Al hacer que los estudiantes participen activamente en su evaluación, se incrementa su motivación y compromiso con el aprendizaje. Mejora del Clima Escolar: Fomenta un ambiente de confianza y colaboración entre docentes y estudiantes, lo que puede mejorar el clima escolar en general. Facilitación del Aprendizaje Colaborativo: Promueve el trabajo en equipo y la colaboración entre estudiantes, lo que enriquece el proceso de aprendizaje.
-															Adaptabilidad: Se puede aplicar en diferentes contextos educativos y niveles de enseñanza, lo que lo hace versátil y útil en diversas situaciones. Preparación para el Futuro: Al centrarse en el desarrollo de competencias y habilidades, prepara a los estudiantes para enfrentar desafíos en su vida personal y profesional.
-								            			
-								            </div>
-
 								            <div  class="grid-item grid11 grid122">
 								            	<table>
 								            		<tr>
@@ -1033,7 +994,7 @@
 								            		</tr>
 								            		<tr>
 								            			<td>Objetivos y coherenica didactica</td>
-								            			<td>3</td>
+								            			<td>5</td>
 								            		</tr>
 								            		<tr>
 								            			<td>Calidad de los contenidos</td>
@@ -1084,6 +1045,194 @@
 								            		<tr>
 								            			<td>Resultado</td>
 								            			<td>4</td>
+								            		</tr>
+								            		
+								            	</table>
+
+								            </div>
+						            
+						        </div>
+						    </div>
+
+						</div>
+
+
+						<div class="boxx4">
+							<b class="t2">Recurso 1 Seleccionado:</b>
+							<div class="icom1"><p class="ico1">🧪 <br>⚗️ <br> 🦠 <br> 👨‍🔬</p></div>
+								<br>
+
+							<div class="scroll-container textxx">
+								        <div class="grid">
+								            <!-- Elementos del Grid -->
+								            <div class="grid-item">
+								            <span>Simulador Laboratorio de mezclas quimicas</span>
+								            <b>Nombre RED</b>
+								        	</div>
+								            <div class="grid-item">
+								            	<span>Ciencias Naturales - Quimica</span>
+								            	<b>Área de conocimiento</b>
+								        	</div>
+								            <div class="grid-item">
+								            	<span>Educacion básica: 8°</span>
+								            	<b>Nivel o grado de aplicación.</b></div>
+								            <div class="grid-item">
+								            	<span>Colombia aprende</span>
+								            	<b>Datos del autor</b>
+								            </div>
+								            
+								            <div class="grid-item">
+								            	<a href="https://contenidosparaaprender.colombiaaprende.edu.co/G_4/S/S_G04_U02_L01/S_G04_U02_L01_03_03.html" class="tex1"   target="_blank">https://contenidosparaaprender.colombiaaprende.edu.co/G_4/S/S_G04_U02_L01/S_G04_U02_L01_03_03.html</a>
+								            	<b>Enlace al RED</b>
+								            </div>
+								            <div class="grid-item">
+								            	<span>Recurso conformado por un simulador del laboratorio de quimica basado en la separacion de mezclas, interactivo e intuitivo para el desarrollo de las clases.</span>
+								            	<b>Descripción del RED.</b>
+								            </div>
+								            
+								            <div class="grid-item grid11">
+								            	
+								            	<img src="Captura.png" class="imgcap">
+								            	<b>Captura de pantalla o imagen del RED</b>
+								            </div>
+
+								           
+
+								            <div class="grid-item grid11 grid122">
+
+
+
+
+								            	<ul>
+								            		<li><b>Ventajas</b></li>
+								            		<li>Enfoque Personalizado: Permite adaptar la evaluación a las necesidades individuales de cada estudiante, reconociendo sus diferentes estilos de aprendizaje y ritmos.</li>
+								            		<li>Fomento de la Autonomía: Al involucrar a los estudiantes en su propio proceso de evaluación, se promueve la autonomía y la responsabilidad en su aprendizaje.</li>
+								            		<li>Desarrollo de Habilidades Críticas: Este modelo ayuda a los estudiantes a desarrollar habilidades críticas y reflexivas, ya que deben analizar su propio desempeño y establecer metas de mejora.</li>
+								            		<li>Retroalimentación Constructiva: Facilita la entrega de retroalimentación continua y constructiva, lo que permite a los estudiantes comprender mejor sus logros y áreas de mejora.</li>
+								            		<li>Evaluación Integral: Considera no solo el conocimiento académico, sino también aspectos emocionales y sociales, lo que contribuye a un desarrollo más completo del estudiante.</li>
+								            		<li>Motivación Aumentada: Al hacer que los estudiantes participen activamente en su evaluación, se incrementa su motivación y compromiso con el aprendizaje.</li>
+								            		<li>Mejora del Clima Escolar: Fomenta un ambiente de confianza y colaboración entre docentes y estudiantes, lo que puede mejorar el clima escolar en general.</li>
+								            		<li>Facilitación del Aprendizaje Colaborativo: Promueve el trabajo en equipo y la colaboración entre estudiantes, lo que enriquece el proceso de aprendizaje.</li>
+								            		<li>Adaptabilidad: Se puede aplicar en diferentes contextos educativos y niveles de enseñanza, lo que lo hace versátil y útil en diversas situaciones. </li>
+								            		<li><b>Limitaciones</b></li>
+								            		<li> Falta de personalización del contenido
+													Limitación: Aunque la plataforma abarca varios contenidos de quimica en solucion y sepracion de meszclas, los contenidos no se personalizan o adaptan para atender las necesidades específicas de cada grado o nivel de desarrollo cognitivo.
+													Impacto: Los estudiantes de otros grados avanzados pueden encontrar algunos contenidos demasiado basicos o, en algunos casos, poco atractivos en términos de diseño y metodología de enseñanza para su edad, lo cual puede dificultar la comprensión y el interés.
+													</li>
+													<li><b>VERIFICACIÓN DE ESTÁNDARES EN EL RED </b></li>
+													<li>Adecuación Pedagógica y Metodológica Descripción: Los contenidos deben estar diseñados para ser comprensibles y atractivos para los estudiantes, empleando metodologías adecuadas para cada nivel y área. 
+													Verificación: A través de pruebas interactivas de test con docentes y estudiantes, se evalúa si los contenidos son accesibles, motivadores y si fomentan el aprendizaje activo y significativo, especialmente en grados de octavo donde los estudiantes aprenden mejor a través de juegos interactivos y actividades dinamicas.</li>
+													<li>Cumplimiento de Estándares de Accesibilidad Descripción: Para asegurar que los contenidos sean inclusivos, deben cumplir con los estándares de accesibilidad digital, permitiendo el uso por estudiantes con discapacidades.
+													Verificación: Esto implica adaptar materiales para personas con discapacidades visuales, auditivas o motoras y verificar que las herramientas funcionan en dispositivos de bajo costo y con conexiones a internet.
+													</li>
+								            	</ul>
+								             </div>
+								            				
+								            <div class="grid-item grid11 grid122">
+								            	<table>
+								            		
+								            		<tr>
+								            			<td >Modelo LORI</td>
+								            		</tr>
+
+								            		<tr>
+								            			<td>Criterios de Evaluacion</td>
+								            			<td>Puntaje (1-5)</td>
+								            		</tr>
+								            		<tr>
+								            			<td>Calidad de los Contenidos</td>
+								            			<td>3</td>
+								            		</tr>
+								            		<tr>
+								            			<td>Adecuacion de los Objetivos de Aprendizaje</td>
+								            			<td>4</td>
+								            		</tr>
+								            		<tr>
+								            			<td>Feedback</td>
+								            			<td>4</td>
+								            		</tr>
+								            		<tr>
+								            			<td>Motivacion</td>
+								            			<td>4</td>
+								            		</tr>
+								            		<tr>
+								            			<td>Resultado</td>
+								            			<td>4</td>
+								            		</tr>		            		
+								            		
+
+								            	</table>
+
+								            </div>	 
+															
+															
+															  
+															
+								           
+
+								            <div  class="grid-item grid11 grid122">
+								            	<table>
+								            		<tr>
+								            			<td >Modelo COdA</td>
+								            		</tr>
+
+								            		<tr>
+								            			<td>Criterios de Evaluacion</td>
+								            			<td>Puntaje (1-5)</td>
+								            		</tr>
+								            		<tr>
+								            			<td>Objetivos y coherenica didactica</td>
+								            			<td>4</td>
+								            		</tr>
+								            		<tr>
+								            			<td>Calidad de los contenidos</td>
+								            			<td>4</td>
+								            		</tr>
+								            		<tr>
+								            			<td>Interactividad y adaptabilidad</td>
+								            			<td>3</td>
+								            		</tr>
+								            		<tr>
+								            			<td>Motivacion</td>
+								            			<td>4</td>
+								            		</tr>
+								            		<tr>
+								            			<td>Resultado</td>
+								            			<td>4</td>
+								            		</tr>
+								            		
+								            	</table>
+								            </div>
+
+								            <div  class="grid-item grid11 grid122">	
+								            	<table>
+								            		<tr>
+								            			<td >Norma Une 71362</td>
+								            		</tr>
+
+								            		<tr>
+								            			<td>Criterios de Evaluacion</td>
+								            			<td>Puntaje (1-5)</td>
+								            		</tr>
+								            		<tr>
+								            			<td>Verificacion y obtencion de los datos</td>
+								            			<td>1</td>
+								            		</tr>
+								            		<tr>
+								            			<td>Matriz de Evaluacion de funcionamiento</td>
+								            			<td>2</td>
+								            		</tr>
+								            		<tr>
+								            			<td>Evaluacion de accesibilidad</td>
+								            			<td>4</td>
+								            		</tr>
+								            		<tr>
+								            			<td>Encuestas y retroalimentación de usuarios</td>
+								            			<td>4</td>
+								            		</tr>
+								            		<tr>
+								            			<td>Resultado</td>
+								            			<td>3</td>
 								            		</tr>
 								            		
 								            	</table>
