@@ -162,9 +162,10 @@
 		/* Vista de bienvenida */
 		.viewes {
 			text-align: center;
-			font-size: 24px;
+			font-size: 22px;
 			color: #2a4196;
 			margin-top: 20px;
+			font-family: 'arial';
 		}
 
 		
@@ -395,7 +396,7 @@
 	display: grid;
   	grid-template-columns: 250px 250px 320px;
   	grid-gap: 30px;
-  	grid-template-rows: 160px 160px 160px;
+  	grid-template-rows: 160px 250px 100px 160px;
   	padding: 30px;
   	text-align: center;
   	overflow-y: scroll;
@@ -403,7 +404,7 @@
   	 height: 400px;
 		
 		}
-.rred div {}
+.rred div { padding: 10px; }
 
 .rredg1 {
 	grid-row: 1/3;
@@ -414,11 +415,82 @@
 .metrica { text-align: center; }
 .metrica table { margin: auto; }
 .metrica {
-	grid-row: 3/4;
+	grid-row: 4/5;
 	grid-column: 3/4;
 }
 
+.method { grid-row: 3/4;	grid-column: 1/3; }
+.criterios2 { grid-row: 2/3;	grid-column: 1/3;}
+.reffer { grid-row: 4/5;	grid-column: 1/3;}
 
+.redi3 { margin: auto; font-size: 25px; text-align: center;  padding: 25px; padding-top: 0px; margin-top: 25px; font-family: 'arial'}
+
+.apOne { display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 250px 200px 100px;
+    grid-row-gap: 25px;
+    overflow-y: scroll;
+    height: 400px; 
+    
+}
+
+    .ApMod {grid-column: 1 / 3;
+    display: grid
+;
+    grid-template-rows: 1fr 300px;
+    width: 804px;
+    margin: auto;
+    overflow-y: scroll;
+    border-style: solid;
+    border-radius: 12px;
+    border-width: 2px;
+    grid-template-columns: 380px 380px;
+    column-gap: 25px;
+    text-align: center;
+    font-family: 'arial';
+    height: 250px;
+    grid-row: 1/2;
+}
+.ap1 {
+	grid-column: 1 / 3;
+    font-size: 21px;
+    font-family: 'arial';
+    text-align: center;
+    padding-top: 15px;
+}
+
+.ap1 span { font-size: 12px;  }
+
+.ap2 { font-size: ; padding-top: 15px;}
+.ap2, .ap3 b {font-size: 16px;}
+.ap2 table { align-items: center; margin: auto; font-size: 14px; }
+.ap2 table, th, td {
+  border-collapse: collapse;
+  border: 0; /* o border: none; */
+}
+
+
+.ap3 table { align-items: center; margin: auto; font-size: 14px; }
+
+.ap3 table, th, td {
+  border-collapse: collapse;
+  border: 0; /* o border: none; */
+}
+.ap3 { font-size: 18px; padding-top: 15px;}
+
+.apT {margin: auto; font-size: 25px; text-align: center;  padding: 25px; padding-top: 0px; margin-top: 25px; font-family: 'arial'}
+
+.presenta { grid-column: 1/2; margin: auto; }
+.analap { grid-column: 1/3}
+
+.doc2 {grid-column: 2/3; grid-row: 2/3; margin-left: 10px; margin-top: 15px; display: flex; }
+.doc2 a { font-size: 40px; }
+.doci { width: 420px; }
+.dia label { font-size: 9px; }
+.dia {text-align: center; font-family: 'arial';	}
+.aws1 {border-style: solid; border-width: 2px; border-radius: 12px; padding: 8px; width: 804px; margin: auto; grid-column: 1/3; grid-row: 3/4;}
+.aws2 {border-style: solid; border-width: 2px; border-radius: 12px; padding: 8px; width: 804px; margin: auto; grid-column: 1/3; grid-row: 4/5;}
+.aws3 {border-style: solid; border-width: 2px; border-radius: 12px; padding: 8px; width: 804px; margin: auto; grid-column: 1/3; grid-row: 5/6;}
 
 
 
@@ -1411,7 +1483,7 @@
 
 
 		<div class="view2">
-			<p>Rediseño</p>
+			<div class="redi3"><b>📈 📉📉 📈 Rediseño 📉 📈📈 📉</b></div>
 
 
 			<div class="red1">
@@ -1420,7 +1492,7 @@
 					<div>
 						
 						<span><b>Título del modelo de evaluación : </b> </span><br>
-						<span>Modelo LORI (Learning Object Review Instrument)</span>
+						<span>VECRED (Verificacion de Calidad de Recursos Educativos Digitales)</span>
 					</div>
 					<div>
 						
@@ -1433,25 +1505,29 @@
 					</div>
 					<div class="rredg1">
 						<span><b>Problemática que motiva el rediseño del modelo</b></span><br>
-						<span>En la actulidad la generacion de nuevo contenido digital debe cumplir con una serie de condiciones, las cuales deben satisfacer la necesidad de aprendizaje constante de los estudiantes, de modo que sea dinamica, accesible, de facil uso y captacion del interes del estudiante por seguir usando el recurso educativo digital en su aprendizaje. <br>
+						<span>En la actulidad la generacion de nuevo contenido digital debe cumplir con una serie de condiciones, las cuales deben satisfacer la necesidad de aprendizaje constante de los estudiantes, de modo que los recursos educativos digitales deben ser dinamicos, accesibles, de facil uso y captacion del interes del estudiante por seguir usando el recurso educativo digital en su aprendizaje. <br>
 							Es asi como los recursos educativos digitales se vuelven una herramienta util para el aprendizaje y transmision de conocimientos adaptados a las tecnologias de la informacion y comunicacion (TIC).
+							<br>
+						Se ha analizado y la mayoria de metodologias no evaluan el impacto que generan los RED en diferentes ambitos de la formacion del estudiante.
 						</span>
 					</div>
-					<div>
-						<b>Criterios de evaluación</b>
+					<div class="criterios2">
+						<b>Criterios de evaluación</b><br>
 						<span>Como escala de evaluacion se ha basado el nuevo modelo en evaluar los siguientes aspectos:</span><br>
-						<span>Calidad de Contenidad</span><br>
+						<span>Calidad de Contenidos</span><br>
 						<span>Accesibilidad</span><br>
 						<span>Aprendizaje</span><br>
-						<span>Evaluacion</span>
+						<span>Evaluacion</span><br>
+						<span>Impacto</span><br>
+						<span>📕 📕 📕 📕 📕 📕 📕</span>
 
 					</div>
 					<div class="metrica">
 						<b>Métrica o escala de valoración</b><br>
-						<span>La escala de metrica evalua los criterios de evluacion de forma cuantitativa y cualitativa de la siguiente forma:</span>
+						<span>La escala de metrica evalua los criterios de evaluacion de forma cuantitativa y cualitativa de la siguiente forma:</span>
 						<table>
 							<tr>
-								<td><b>Creiterio de Evaluacion</b></td>
+								<td><b>Criterio de Evaluacion</b></td>
 								<td><b>Cuantitativa</b></td>
 								<td><b>Cualitativa</b></td>
 							</tr>
@@ -1479,13 +1555,30 @@
 								</td>
 								<td> Bajo <br> Medio <br> Alto </td>
 							</tr>
+							<tr>
+								<td>Impacto educativo</td>
+								<td>Socioemocional <br> Socioeducativo <br> Sociocultural</td>
+								<td>Con impacto <br> Sin impacto</td>
+							</tr>
 						</table>
 							
 						</tr>
 					</div>
-					<div>Metodología</div>
-					<div>Metodología</div>
-					<div>Referencias bibliográficas</div>
+
+					
+					<div class="method">
+						<b>Metodología	</b><br>
+						<span>
+							Los recursos educativos seran evaluados mediante la metrica, la cual busca conocer que tanta calidad sofrece el RED sobre tres aspectos evaluados en el impacto para los estudiantes, estos impactos estab basados en los enfoques de temas socioemocionales, socioeducativos y socioculturales. <br> 
+							La conclusion debe estar relacionada con el conocimiento que el estudiante esta recibiendo en su formacion. El rediseño plantea la evaluacion de los tres enfoques, es importante destacar que la educacion es diferente segun la region, las contumbres y tradiciones, este metodo de resiseño nos ayuda a plantear un enfoque humanistico al analizar los RED que deben ser correctos en cada institucion.
+						</span>
+					</div>
+					<div class="reffer">
+					<b></b><br>
+					<span>
+						
+					</span>
+					</div>
 					
 				</div>
 				
@@ -1499,10 +1592,180 @@
 
 			<button class="close" onclick="cerrarVentana(2)">X</button> <!-- Botón de cierre -->
 		</div>
+
+
+
 		<div class="view3">
-			<p>Contenido de la Vista 3</p>
+			<div class="apT"><b>✅ ☑️ ✅ ☑️ Aplicación de Modelo de Evaluación Rediseñado ✅ ☑️ ✅ ☑️</b></div>
+
+			<div class="apOne">
+				<div class="ApMod">
+
+					<div class="ap1">
+						<b>INFORME DE APLICACIÓN DE LOS MODELOS DE EVALUACION RED</b><br>
+						<span>Recurso educativo digital evaluado:
+							Simulador Interaccion de la Insulina <br>
+							
+
+							<a href="https://www.msdmanuals.com/es/hogar/multimedia/3dmodel/cómo-actúa-la-insulina" target="_blank">https://www.msdmanuals.com/es/hogar/multimedia/3dmodel/cómo-actúa-la-insulina</a>
+
+						
+
+						</span>
+					</div>
+
+					<div class="ap2">
+						<b>Modelos LORI</b>
+						<div><br>
+							<table>
+								<tr><b>Evaluacion del Recurso</b></tr>
+								<tr>
+									<td>Calidad de los contenidos </td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>Objetivos de aprendizaje</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>Retroalimentacion</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>Adaptacion de contenidos</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td>Motivacion</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td>Presentacion y diseño</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>Usabilidad</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>Reuso</td>
+									<td>4</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="ap3">
+						<b>Modelo Rediseñdado VECRED</b>
+						<div><br>
+							<table>
+								<tr><b>Evaluacion del Recurso</b></tr>
+								<tr>
+									<td>Calidad de los contenidos </td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>Accesibilidad</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td>Áprendizaje</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td>Evaluacion</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td>Inpacto Educativo</td>
+									<td>SocioEducativo</td>
+								</tr>
+								
+							</table>
+						</div>
+					</div>
+					
+					
+
+					<div class="analap">
+						<b>Analisis del Rediseño</b><br>
+						<span>La aplicacion de la metrica por parte del modelo rediseñado arroja que los recursos educativos digitales tienen un inpacto socioeducativo y sociocultural, determinando asi temas de la asigantura de ciencias naturales propios para la implmentacion de RED dentro del aula, el enfoque y desarrollo del RED debe cumpli con la necesidad del estudiante en su formacion personal, reconociendo su zona, cultura, historia y desarrollo economico
+
+						</span><br><br>
+						<b>Diferencias entre modelos de evaluacion</b><br>
+						<span>
+							El modelo rediseñado tiene la ventaja de analizar el contexto del conocimiento que el estudiante debe aprender enfocao en el entorno en que el conocimiento es generado por medio de la creacion, la evaluacion, la implementacion, la recoleccion de datos y analisis de la usabilidad del recurso, el estudiante debe recibir un conocomiento propio que le ayude a compreder el mundo que lo rodea y el contesto en que el que se esta desarrollando su presente.
+							
+						</span><br>
+						<span><b>Lori.</b> Permite establcer que los recurso educativos tienen la capacidad de ser aplicados y que cumplen con las condiciones necesarias para ser evaluadoas, pero mucho del conocimiento evaluado puede estar fuero de contesto, la necesidad de evaluar la calidad de los recursos educativos digitales para la educacion son necesarios para mejorar el aprendizaje didactico de los estudiantes.</span><br>
+
+						<span>
+							<b>VECRED</b> Permite evaluar la calidad del recurso educativo digital por medio de la necesidad del conocimiento basado en el contexto poblacional de los estudiantes, determinando asi las caracteristicas necesarias en su entorno, sociocultura, socioeducativo y socioemocional, enfoques que son necesarios en la formacion de personas y su apropiacion por la cultura, lugar. Este rediseño se ha generado por la necesidad cultural que tiene cada zona en Colombia, pais que por tener una grografia variadad, cambia mucho sus culturas y asi la necesidad de generar contenidos en la planeacion docente se convierte en un autoaprendizaje del desarrollo tanto ecomocional, actidudinal y educativo de los estudiantes. Teniendo en cuenta que Colombia es un pais que tiene una educacion variada desde publica, privada, presencial virtual, sus poblaciones hacen parte de las cuidadas, como tambien en cada municippio se cuenta con la urbanidad y ruralidad, lo que genera los cambios contantes en la planificacion de la planeacion docente. Basado en esta necesidad de planteo el rediseño.
+						</span>
+					</div>
+
+
+				</div>
+				<div class="presenta">
+						<iframe src="https://xn--rediseored-y9a.my.canva.site/" width="100%" height="auto" ></iframe>
+
+
+					</div>
+
+				<div class="doc2">
+					<div class="dia">
+						<a href="ruta/del/archivo/tu_documento.docx" download="nombre_del_archivo.docx" id="doc"> 📄 </a><br>
+						<label for="doc">Descargar <br>Documento </label>
+					</div>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+					<div>
+						<iframe class="doci" src="https://docs.google.com/document/d/e/2PACX-1vQ3HQjN0u2_OEf871LctL2LTk-ACEe2NH-H-67gZpBVb4E8V_l9FTN3-Z6hzpdqRQ/pub?embedded=true"  frameborder="0" allowfullscreen></iframe>
+					</div>
+
+					
+				</div>
+				<div class="aws1">
+					<b>Conclusiones</b><br>
+					<b>¿De qué manera el modelo rediseñado permite realizar una adecuada evaluación de un RED?</b><br>
+					<span>
+						El modelo propuesto rediseñado VECRED realiza una evaluacion de la calidad de los elementos que conforman un RED, basado en los tres modelos descritos en las anteriores apartados, este modelo fue propuesto para evaluar la calidad de los contendios de los RED antes de ser aplicados basados en el contesto geografico en que se localizan los estudiantes.
+					</span> 
+
+
+				</div>
+				<div class="aws2">
+					<b>¿Qué ventajas tiene el modelo rediseñado frente a otros modelos existentes en el mercado?</b><br>
+					<span>
+						Este modelo fue rediseñado para tener encuenta los aspectos socioemocionales, socioculturales y socioeducativos en la formacion de los estudiantes, en los diferewntes modelos se evaluan los procesos de aprendizaje de los RED bajo el cumplimiento de los estandares basicos de educacion, aun asi VECRED fue creado pensando en la necesidad educativa de Colombia bajo el ambito cultural de cada region basado en la educacion publica, privada, urabana y rural, pues cada educacion formadora de personas se basa en las herramientas que se disponene y en como se aplican para el aprendizaje.
+					</span>
+					
+				</div>
+				<div class="aws3">
+					<b>¿Qué elementos técnicos, pedagógicos y comunicacionales deben ser mejorados en el modelo rediseñado?</b><br>
+					<span>
+						El modelo rediseñado cumple con los elementos tecnicos, pedagogicos y comunicacionales que debe evaluar todo modelo a un RED, este modelo busca el desarrollo de las competencias educativas basadas en el aprendizaje segun las necesidades y contexto de vida de la poblacion estudiantil.
+					</span>
+					<br><br>
+
+					<span>Aun asi los elementos tecnologicos siempre dependenran de la disponibilidad de conexion y requerimientos de los programas, es una brecha que se presenta en la educacion</span>
+					
+				</div>
+			</div>
+
+
+
+
+
+
 			<button class="close" onclick="cerrarVentana(3)">X</button> <!-- Botón de cierre -->
 		</div>
+
+
+
+
+
+
+
+
 		<div class="view4">
 			<p>Contenido de la Vista 4</p>
 			<button class="close" onclick="cerrarVentana(4)">X</button> <!-- Botón de cierre -->
